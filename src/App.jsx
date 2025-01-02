@@ -1,8 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function App() {
+  // hooks
+  // 1. useState hooks
+  const [winner, setWinner]= useState("none ");
+  console.log(winner)
   return (
     <div>
+  <p className="text-2xl font-bold">the winner is 🎉 {winner}</p>
+
+     <div className="grid grid-cols-3 lg:grid-cols-6 text-white gap-8 my-12">
+    { winner === "Hari" ?
+     <p className="bg-gray-600 px-8 py-2 font-semibold" onClick={()=>setWinner("Hari")}>hari</p>
+    :
+    <p className="bg-orange-600 px-8 py-2 font-semibold" onClick={()=>setWinner("Hari")}>hari</p>
+    }
+      
+     { winner ==="ram" ?
+       <p className="bg-gray-600 px-8 py-2 font-semibold" onClick={()=>setWinner("ram")}>ram</p>
+       :
+       <p className="bg-orange-600 px-8 py-2 font-semibold" onClick={()=>setWinner("ram")}>ram</p>
+     }
+      
+      {
+        winner === "sham" ?
+        <p className="bg-gray-600 px-8 py-2 font-semibold" onClick={()=>setWinner("sham")}>sham</p>
+        :
+        <p className="bg-orange-600 px-8 py-2 font-semibold" onClick={()=>setWinner("sham")}>sham</p>
+      }
+
+
+      {
+        winner === "jayanti" ?
+        <p className="bg-gray-600 px-8 py-2 font-semibold" onClick={()=>setWinner("jayanti")}>jayanti</p>
+        :
+        <p className="bg-orange-600 px-8 py-2 font-semibold" onClick={()=>setWinner("jayanti")}>jayanti</p>
+      }
+      
+      {
+        winner === "sita"?
+        <p className="bg-gray-600 px-8 py-2 font-semibold" onClick={()=>setWinner("sita")}>sita</p>
+        :
+        <p className="bg-orange-600 px-8 py-2 font-semibold" onClick={()=>setWinner("sita")}>sita</p>
+      }
+      
+    {
+      winner ==="gita"?
+      <p className="bg-gray-600 px-8 py-2 font-semibold" onClick={()=>setWinner("gita")}>gita</p>
+      :
+      <p className="bg-orange-600 px-8 py-2 font-semibold" onClick={()=>setWinner("gita")}>gita</p>
+    }
+
+     </div>
+
+
+
+
+
+
+
+
+
       <div className=" bg-orange-100/50 py-16 ">
         {/* pricing section */}
         <div className=" lg:w-8/12 mx-auto flex flex-col items-center space-y-8">
@@ -139,7 +197,7 @@ export default function App() {
 
       {/* people join */}
       <div className=" bg-slate-700 py-6 ">
-        <div className=" w-10/12 mx-auto grid grid-cols-4 gap-16">
+        <div className=" w-10/12  mx-auto grid grid-cols-2 lg:grid-cols-4 gap-16">
           <div className=" space-y-6 flex flex-col items-center gap-6">
             <div className="bg-blue-100 p-4 rounded-lg">
               <svg
@@ -231,7 +289,7 @@ export default function App() {
 
       {/* office address */}
 
-      <div className="w-11/12 mx-auto grid grid-cols-3 gap-8 mt-10">
+      <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
         <div className="flex items-center gap-4 bg-orange-100 p-6 rounded-md">
           <svg className=" animate-bounce"
             xmlns="http://www.w3.org/2000/svg"
